@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IntoTheWeb - Exercice d'intégration</title>
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <script src="./js/main.js"></script>
+  </head>
+  <body>
+
+    <header>
+      <div id="stickyMenu">
+        <h1 id="logo"><a href="#">IntoTheWeb</a></h1>
+
+        <nav id=topnav class="navbar">
+          <ul>
+            <li><a href="javascript:void(0);" class="toggleMenu" onclick="responsiveMenu()">&#9776;</a></li>
+            <li><a href="#">Qui sommes-nous ?</a></li>
+            <li><a href="#">Nos réalisations</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#" class="icon" id="facebook">Facebook</a></li>
+            <li><a href="#" class="icon" id="twitter">Twitter</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="jumbo">
+        <span>Design.</span>
+        <span>Build.</span>
+        <span>Success.</span>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+        <a href="#" class="arrow-down">Scroll</a>
+      </div>
+    </header>
+
+    <section class="whatwedo">
+      <h2>Ce que nous faisons</h2>
+      <div class="container">
+        <div class="col-2">
+          <p class=" headline">Vestibulum id ligula porta felis euismod semper.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+        <div class="col-2">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+        <a href="#" class="button button-primary">Voir plus de projets</a>
+      </div>
+
+
+      <div class="projects">
+        <article class="col-3" id="supp">
+          <img src="./img/project-suptrotters.png" onload="retina(this,'./img/project-suptrotters.png')" alt="" />
+          <h3>SUPTrotters</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <a href="#" class="button button-more"></a>
+        </article>
+        <article class="col-3" id="seaters">
+          <img src="./img/project-seaters.png" onload="retina(this,'./img/project-seaters.png')" alt="" />
+          <h3>Seaters</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <a href="#" class="button button-more"></a>
+        </article>
+        <article class="col-3" id="pharm">
+          <img src="./img/project-easypharm.png" onload="retina(this,'./img/project-easypharm.png')" alt="" />
+          <h3>Easypharm</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <a href="#" class="button button-more"></a>
+        </article>
+        <article class="col-3" id="vete">
+          <img src="./img/project-veto.png" onload="retina(this,'./img/project-veto.png')" alt="" />
+          <h3>Mon vétérinaire</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <a href="#" class="button button-more"></a>
+        </article>
+      </div>
+
+    </section>
+
+    <section class="choose-us">
+      <h2>Pourquoi nous choisir ?</h2>
+      <div class="container">
+        <p class="headline">Vestibulum id ligula porta felis euismod semper.</p>
+        <div class="col-2">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        </div>
+        <div class="col-2">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+        <a href="#" class="button button-primary">Plus sur IntoTheWeb</a>
+      </div>
+
+    </section>
+    <footer>
+      <div class="container">
+        <div class="col-4">
+          <h4>Navigation</h4>
+          <nav>
+            <ul>
+              <li><a href="#">Qui sommes-nous ?</a></li>
+              <li><a href="#">Nos réalisations</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="col-4">
+          <h4>Contactez-nous</h4>
+          <a href="mailto:info@intotheweb.be">info@intotheweb.be</a>
+          <a href="tel:+32484747721">+32 (0) 484 74 77 21</a>
+          <p class="tva">TVA : BE 0824.642.233</p>
+        </div>
+        <div class="col-4">
+          <h4>Nous trouver</h4>
+          <address class="">
+            Rue du Fort, 5<br>
+            4671 Barchon<br>
+            Belgique
+          </address>
+        </div>
+      </div>
+    </footer>
+
+  </body>
+</html>

@@ -7,9 +7,10 @@
 }
 
 @mixin borderRadius($value1,$value2,$value3,$value4){
-  border-radius: $value1 $value2 $value3 $value4;
   -moz-border-radius: $value1 $value2 $value3 $value4;
   -webkit-border-radius: $value1 $value2 $value3 $value4;
+  -o-border-radius: $value1 $value2 $value3 $value4;
+  border-radius: $value1 $value2 $value3 $value4;
 }
 
 @mixin playBackgroundPosition($name,$pos1,$pos2){
@@ -43,11 +44,15 @@
  background-image: -o-linear-gradient($deg,$color1,$color2);
  background-image: -moz-linear-gradient($deg,$color1,$color2);
  background-image: -webkit-linear-gradient($deg,$color1,$color2);
+ background-image: -ms-linear-gradient($deg,$color1,$color2);
  background-image: linear-gradient($deg,$color1,$color2);
+ background-image: -webkit-gradient(linear, top, bottom, color-stop(0%,$color1), color-stop(100%,$color2));
 }
 
 @mixin filterGrayBright($gray,$bright){
   -webkit-filter: grayscale($gray) brightness($bright);
+  -moz-filter: grayscale($gray) brightness($bright);
+  -o-filter: grayscale($gray) brightness($bright);
   filter: grayscale($gray) brightness($bright);
 }
 

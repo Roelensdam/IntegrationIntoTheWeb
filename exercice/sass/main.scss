@@ -22,7 +22,7 @@ h1#logo{
     width: 128px;
     height:77px;
     background: url(../img/logo-sprite.png) 0 0 no-repeat;
-    background-position:0 0px;
+    background-position:0 0;
     background-size: 3456px 77px;
     @include animations(logo,1.5s, 27);
   }
@@ -33,7 +33,7 @@ h1#logo{
   position: relative;
   top:-30px;
 }
-@include playBackgroundPosition(logo,-3456px,0px);
+@include playBackgroundPosition(logo,-3456px,0);
 
 div#stickyMenu{
   padding:0 150px;
@@ -47,7 +47,7 @@ div#stickyMenu{
     h1{
       a{
         background: url(../img/logo-sprite.png) 0 0 no-repeat;
-        background-position: -3200px 0px;
+        background-position: -3200px 0;
         background-size: 3456px 77px;
       }
     }
@@ -179,6 +179,7 @@ section{
     color:$blue;
     display: block;
     width:auto;
+    border:4px solid rgb(54,164,199);
     border:4px solid rgba(54,164,199,0.4);
     padding:5px 10px;
 
@@ -248,7 +249,7 @@ section.whatwedo{
 
 div.projects{
   width: 100%;
-  font-size: 0px;
+  font-size:0;
   float: left;
   $i: 0;
   @while $i < 5 {
@@ -320,6 +321,7 @@ div.projects{
       @include transitionMixin(top 0.5s linear,left 0.5s linear);
     }
     a{
+        border-color:rgb(255,255,255);
         border-color:rgba(255,255,255,0.5);
         color:white;
         width:60%;
@@ -393,11 +395,11 @@ section.choose-us{
 
 footer{
   background:url(../img/line-footer.png) 0 0 no-repeat;
-  background-position: 50% 0px;
+  background-position: 50%0;
   div.container{
     margin:0 220px;
     width: 700px;
-    font-size: 0px;
+    font-size:0;
     text-align:center;
     line-height: 2.25;
     a{
@@ -483,18 +485,46 @@ footer{
           width: calc(50% - 50px);
           margin:0 20px 20px 0;
           padding:20px;
+          &:hover{
+            &#seaters{
+              h3{
+                top:100px;
+                left:35%;
+              }
+            }
+            &#vete{
+              h3{
+                top:100px;
+                left:15%;
+              }
+            }
+            h3{
+              top:100px;
+              left:25%;
+            }
+            img{
+              top:25px;
+              left:calc(50% - 64px);
+            }
+          }
           &#supp{
             margin-bottom:60px;
           }
           &#seaters{
             margin-right:0;
             margin-bottom:60px;
+            h3{
+              left:0;
+            }
           }
           &#vete{
             margin-right:0;
+            h3{
+              left:0;
+            }
           }
           & img{
-              left:33%;
+              left:calc(50% - 64px);
           }
       }
     }
@@ -531,14 +561,31 @@ footer{
 @media only screen and (min-width: 950px) and (max-width: 1290px) {
   section{
     div.projects{
-      article[class*="col-"]:hover{
-        img{
-          left:38%;
-          top:9%;
-        }
-        h3{
-          top:120px;
-          left:0;
+      article[class*="col-"]{
+        &:hover{
+          &#pharm{
+            h3{
+              left:100px;
+            }
+          }
+          &#supp{
+            h3{
+              left:100px;
+            }
+          }
+          &#vete{
+            h3{
+              left:100px;
+            }
+          }
+          img{
+            left:38%;
+            top:9%;
+          }
+          h3{
+            top:120px;
+            left:0;
+          }
         }
       }
     }
@@ -556,6 +603,29 @@ footer{
       article[class*="col-"] {
           width: calc(100% - 60px);
           top:0;
+          h3{
+            left:0;
+          }
+          &:hover{
+            &#seaters{
+              h3{
+                left:40%;
+              }
+            }
+            &#vete{
+              h3{
+                left:30%;
+              }
+            }
+            h3{
+              top:100px;
+              left:35%;
+            }
+            img{
+              top:25px;
+              left:calc(50% - 64px);
+            }
+          }
           &#supp{
             margin-top:0px;
             margin-bottom:0;
@@ -633,6 +703,7 @@ footer{
             li{
               display: block;
               width:100%;
+              border-bottom:1px solid rgb(255,255,255);
               border-bottom:1px solid rgba(255,255,255,0.5);
               a{
                 &:hover{
@@ -681,6 +752,13 @@ footer{
 
   }
 }
+@media only screen and (min-width:620px) and (max-width: 768px) {
+  section.choose-us{
+    padding-top:150px;
+    height:464px;
+    margin-top:-150px;
+  }
+}
 
 //------------------------------Retina Pictures------------------------------//
 @media only screen and (-moz-min-device-pixel-ratio: 1.5),
@@ -726,8 +804,4 @@ only screen and (min-resolution: 1.5dppx) {
   }
 }
 
-//media querie 500px choose-us
-//animation article personnaliser pour chaque media queries
-//optimisation code et test de vitesse
-//Validator + W3C + Outline
-//GIT
+//GIT (deja fait un commit)

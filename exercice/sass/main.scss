@@ -124,6 +124,7 @@ header{
     }
   }
   nav{
+    width:(1130px-128px);
     width:calc(100% - 128px);
     display:inline-block;
     vertical-align: middle;
@@ -156,6 +157,15 @@ header{
           &.toggleMenu{
             font-size:32px;
             display:none;
+            position: relative;
+            top: -5px;
+            right: -40px;
+            & div {
+                width: 35px;
+                height: 5px;
+                background-color: white;
+                margin: 6px 0;
+            }
           }
         }
       }
@@ -208,6 +218,7 @@ section{
     padding-bottom:32px;
     margin:0 150px;
     margin-top:32px;
+    width:700px;
     width: calc(100% - 440px);
     p{
       font-size: 16px;
@@ -215,7 +226,8 @@ section{
     div.col-2{
       vertical-align: top;
       font-size: 16px;
-      width:(100%/2);
+      width:48%;
+      width:calc(100%/2);
       display: inline-block;
       p.headline+p{
         padding-top:0;
@@ -260,6 +272,7 @@ div.projects{
   article{
     &.col-3{
       display:inline-block;
+      width:(920px/4);
       width:calc((100% - 205px) / 4);
     }
     color:white;
@@ -418,7 +431,8 @@ footer{
       vertical-align: top;
       font-size:18px;
       display:inline-block;
-      width:(100%/3);
+      width:32%;
+      width:calc(100%/3);
     }
   }
   a{
@@ -430,6 +444,7 @@ footer{
 
 @media only screen and (max-width: 1290px) {
   header,section,footer{
+    width:1050px;
     width:calc(100% - 100px);
     margin:0 auto;
     padding:40px 50px;
@@ -437,12 +452,14 @@ footer{
   header{
     height: 860px;
     padding-top:50px;
+    width:1050px;
     width:calc(100% - 100px);
   }
   footer{
     div.container{
       margin:0;
-      width:100%;
+      width:950px;
+      width:calc(100% - 0px);
       div[class*="col-"] {
           width: 33%;
       }
@@ -455,6 +472,7 @@ footer{
     div.container{
       background-position:125% 77%;
       margin:0;
+      width:950px;
       width:calc(100% - 100px);
       div[class*="col-"] {
           width: 100%;
@@ -471,6 +489,7 @@ footer{
       background-position:125% 65%;
       margin:0;
       padding:50px;
+      width:950px;
       width:calc(100% - 100px);
       div[class*="col-"] {
           width: 100%;
@@ -482,6 +501,7 @@ footer{
     div.projects{
       float:none;
       article[class*="col-"] {
+          width:450px;
           width: calc(50% - 50px);
           margin:0 20px 20px 0;
           padding:20px;
@@ -504,6 +524,7 @@ footer{
             }
             img{
               top:25px;
+              left:75px;
               left:calc(50% - 64px);
             }
           }
@@ -524,6 +545,7 @@ footer{
             }
           }
           & img{
+              left:75px;
               left:calc(50% - 64px);
           }
       }
@@ -533,6 +555,7 @@ footer{
     padding:0;
     &.sticky {
       left:0;
+      width:1050px;
       width: calc(100% - 100px);
       padding:0 50px;
     }
@@ -542,7 +565,7 @@ footer{
   }
   header{
     nav{
-      width:80%;
+      width:70%;
     }
     div.jumbo{
       padding:0;
@@ -596,11 +619,16 @@ footer{
 
 @media only screen and (max-width: 768px) {
   section{
+    width:86%;
+    width:calc(100% - 100px);
     div.container{
+      width:80%;
+      width:calc(100% - 100px);
       background-position:180% 74%;
     }
     div.projects{
       article[class*="col-"] {
+          width:90%;
           width: calc(100% - 60px);
           top:0;
           h3{
@@ -623,6 +651,7 @@ footer{
             }
             img{
               top:25px;
+              left:40%;
               left:calc(50% - 64px);
             }
           }
@@ -646,10 +675,14 @@ footer{
     }
   }
   section.choose-us{
+    width:86%;
+    width:calc(100% - 100px);
     padding-top:50px;
     height:664px;
     margin-top:-50px;
     div.container{
+      width:80%;
+      width:calc(100% - 100px);
       background-position:180% 83%;
       p.headline{
         width:100%;
@@ -657,6 +690,8 @@ footer{
     }
   }
   footer{
+    width:86%;
+    width:calc(100% - 100px);
     div.container{
       margin:0;
       width:100%;
@@ -690,7 +725,7 @@ footer{
             height:40px;
             position: absolute;
             top:-63px;
-            right:55px;
+            right:75px;
             &:hover{
               background-color:transparent;
             }
@@ -728,17 +763,26 @@ footer{
         }
       }
       &.sticky{
+        width:86%;
         nav{
           ul{
             li{
               a.toggleMenu{
-                top:-58px;
-                right:55px;
+                top:0px;
+                right:-40px;
               }
             }
           }
           &.responsive{
             top:75px;
+            ul{
+              li{
+                a.toggleMenu{
+                  top: -55px;
+                  right: 80px;
+                }
+              }
+            }
           }
         }
       }
@@ -747,6 +791,7 @@ footer{
         padding-top: 135px;
       }
     }
+    width:94%;
     width:calc(100% - 40px);
     padding:40px 20px;
 
